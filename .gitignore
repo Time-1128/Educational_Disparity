@@ -1,0 +1,22 @@
+# Ignore Python virtual environment folders
+venv/
+env/
+.venv/
+
+# Ignore cache files
+__pycache__/
+*.pyc
+
+# VS Code settings
+.vscode/
+
+# macOS / Windows junk files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary data
+*.log
+*.sqlite3
+
+# Optional: ignore large local data files
+# data/*.csv
