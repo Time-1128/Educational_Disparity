@@ -43,7 +43,7 @@ source venv/bin/activate
 > 📋 Install all required Python libraries listed in `requirements.txt`.
 
 ```bash
-pip install -r requirements/requirements.txt
+pip install -r requirements.txt
 ```
 
 ---
