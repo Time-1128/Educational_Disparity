@@ -18,5 +18,5 @@ Thumbs.db
 *.log
 *.sqlite3
 
-# Optional: ignore large local data files
-# data/*.csv
+#Optional: ignore large local data files
+data/*.csv
