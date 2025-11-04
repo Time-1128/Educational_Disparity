@@ -23,7 +23,7 @@ fig_state = px.bar(
     title="Average Education Quality Index (EQI) by State",
     labels={"state_name": "State", "edu_quality_index": "Education Quality Index"},
 )
-st.plotly_chart(fig_state, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_state, config={"responsive": True}, width='stretch')
 
 # ------------------------------
 # ⚖️ Inequality Within States
@@ -40,7 +40,7 @@ fig_ineq = px.bar(
     title="Variation in EQI (Standard Deviation) Within States",
     labels={"state_name": "State", "EQI Variation": "Standard Deviation"},
 )
-st.plotly_chart(fig_ineq, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_ineq, config={"responsive": True}, width='stretch')
 
 # ------------------------------
 # 🔍 Compare Two States
@@ -59,7 +59,7 @@ fig_compare = px.box(
     color="state_name", points="all",
     title=f"Education Quality Index Comparison — {state_a} vs {state_b}",
 )
-st.plotly_chart(fig_compare, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_compare, config={"responsive": True}, width='stretch')
 
 st.markdown("""
 ✅ **Insights**:

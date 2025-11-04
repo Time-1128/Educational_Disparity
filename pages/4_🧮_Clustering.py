@@ -64,7 +64,7 @@ fig = px.scatter(
     hover_data=["district_name", "state_name", "edu_quality_index"],
     title="District Clusters Based on Educational Indicators (PCA Visualization)",
 )
-st.plotly_chart(fig, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig, config={"responsive": True}, width='stretch')
 
 # ... existing imports, code, and 2D PCA plot ...
 
@@ -89,7 +89,7 @@ fig_3d = px.scatter_3d(
     hover_data=["district_name", "state_name", "edu_quality_index"],
     title="3D PCA Visualization of Educational Clusters",
 )
-st.plotly_chart(fig_3d, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_3d, config={"responsive": True}, width='stretch')
 
 # -------------------------------------------------
 # CLUSTER SUMMARY
@@ -135,7 +135,7 @@ st.dataframe(
         "pre_primary_ratio": "{:.2f}",
         "edu_quality_index": "{:.2f}"
     }),
-    use_container_width=True
+    width='stretch'
 )
 
 # -------------------------------------------------
@@ -152,7 +152,7 @@ fig_state = px.bar(
     title="State-wise Distribution of Districts by Cluster",
     labels={"district_name": "Number of Districts", "state_name": "State", "color": "Cluster"},
 )
-st.plotly_chart(fig_state, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_state, config={"responsive": True}, width='stretch')
 
 # -------------------------------------------------
 # INTERPRETATION & INSIGHTS

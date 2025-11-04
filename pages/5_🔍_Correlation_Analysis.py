@@ -13,6 +13,6 @@ selected_cols = st.multiselect("Select columns to analyze", num_cols,
 if len(selected_cols) >= 2:
     corr = df[selected_cols].corr()
     fig = px.imshow(corr, text_auto=True, color_continuous_scale="RdBu_r", title="Feature Correlation Heatmap")
-    st.plotly_chart(fig, config={"responsive": True}, use_container_width=True)
+    st.plotly_chart(fig, config={"responsive": True}, width='stretch')
 else:
     st.warning("Please select at least two columns.")

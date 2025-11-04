@@ -62,7 +62,7 @@ fig = px.bar(
         "state_name": "State",
     },
 )
-st.plotly_chart(fig, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig, config={"responsive": True}, width='stretch')
 
 # -------------------------------------------------
 # VISUALIZATION: BOTTOM DISTRICTS
@@ -82,7 +82,7 @@ fig2 = px.bar(
         "state_name": "State",
     },
 )
-st.plotly_chart(fig2, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig2, config={"responsive": True}, width='stretch')
 
 # -------------------------------------------------
 # 📘 EDUCATION QUALITY INDEX (EQI) FORMULA SECTION

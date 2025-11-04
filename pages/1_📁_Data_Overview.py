@@ -25,7 +25,7 @@ else:
     filtered_df = df.copy()
 
 st.write(f"### 📄 Showing {len(filtered_df):,} Records")
-st.dataframe(filtered_df, use_container_width=True)
+st.dataframe(filtered_df, width='stretch')
 
 # -------------------------------------------------
 # 📥 DOWNLOAD FILTERED DATA BUTTON
@@ -72,4 +72,4 @@ else:
         title=f"Total Schools by District in {states[0]}",
     )
 
-st.plotly_chart(fig, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig, config={"responsive": True}, width='stretch')

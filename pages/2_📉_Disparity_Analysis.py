@@ -59,7 +59,7 @@ fig_dist = px.histogram(
     labels={"avg_student_teacher_ratio": "Student–Teacher Ratio"},
     color_discrete_sequence=["#2E91E5"]
 )
-st.plotly_chart(fig_dist, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_dist, config={"responsive": True}, width='stretch')
 
 # -------------------------------------------------
 # 🏫 INFRASTRUCTURE SCORE BY STATE
@@ -74,7 +74,7 @@ fig_box = px.box(
     labels={"avg_infra_score": "Infrastructure Score", "state_name": "State"},
     color_discrete_sequence=["#E15F99"]
 )
-st.plotly_chart(fig_box, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_box, config={"responsive": True}, width='stretch')
 st.divider()
 
 # -------------------------------------------------
@@ -126,7 +126,7 @@ fig_bubble = px.scatter(
         color_col: color_col.replace("_", " ").title(),
     }
 )
-st.plotly_chart(fig_bubble, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_bubble, config={"responsive": True}, width='stretch')
 st.caption("🟢 Larger bubbles = More schools | 💡 Color intensity = Higher value of the selected metric")
 st.divider()
 
@@ -151,7 +151,7 @@ with col1:
         labels={"district_name": "District", metric: metric_label, "state_name": "State"},
         color_discrete_sequence=px.colors.qualitative.Pastel
     )
-    st.plotly_chart(fig_top, config={"responsive": True}, use_container_width=True)
+    st.plotly_chart(fig_top, config={"responsive": True}, width='stretch')
 
 with col2:
     st.write(f"### ⚠️ Bottom 10 Districts (Needs Improvement)")
@@ -164,7 +164,7 @@ with col2:
         labels={"district_name": "District", metric: metric_label, "state_name": "State"},
         color_discrete_sequence=px.colors.qualitative.Safe
     )
-    st.plotly_chart(fig_bottom, config={"responsive": True}, use_container_width=True)
+    st.plotly_chart(fig_bottom, config={"responsive": True}, width='stretch')
 st.divider()
 
 # -------------------------------------------------
@@ -184,7 +184,7 @@ fig_ineq = px.bar(
     labels={"state_name": "State", "EQI Variation": "Standard Deviation"},
     color_discrete_sequence=["#00C49F"]
 )
-st.plotly_chart(fig_ineq, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_ineq, config={"responsive": True}, width='stretch')
 
 st.markdown("""
 🔹 **Higher bars** → greater disparity among districts  
@@ -214,7 +214,7 @@ fig_compare = px.box(
     labels={"edu_quality_index": "Education Quality Index", "state_name": "State"},
     color_discrete_sequence=px.colors.qualitative.Set2
 )
-st.plotly_chart(fig_compare, config={"responsive": True}, use_container_width=True)
+st.plotly_chart(fig_compare, config={"responsive": True}, width='stretch')
 
 
 
